@@ -1,0 +1,39 @@
+The provided code is a solution to a problem where you are given:
+
+An integer n, representing the size of an array of numbers from 1 to n.
+
+A list of conflictingPairs, where each pair [a, b] indicates that both a and b cannot be in the same subarray.
+
+🧩 Understanding the Problem:
+You must compute the maximum number of non-conflicting subarrays that can be formed from the array of size n.
+
+🔍 Leetcode Pattern Followed:
+The code falls under the Greedy + Sorting + Interval Scheduling pattern, commonly seen in problems such as:
+
+Interval Partitioning / Interval Scheduling
+
+Activity Selection Problem
+
+Weighted Interval Scheduling (Profit-based intervals)
+
+Greedy Algorithms for Conflict Resolution
+
+📚 Common Leetcode Patterns Matched:
+Pattern Type	Explanation
+Greedy Algorithm	Tries to maximize profit by choosing optimal intervals.
+Interval Scheduling	Sorts the conflicting pairs by their endpoints, like classic interval problems.
+Dynamic Sliding Bound	Keeps track of max1 and max2 to adjust profit dynamically.
+Prefix Optimization	Accumulates the optimal "profit" across sorted intervals.
+
+🧠 Similar Leetcode Problems:
+Here are similar problems you can look at on Leetcode:
+
+Problem	Pattern	Link
+435. Non-overlapping Intervals	Greedy / Interval Scheduling	Link
+1288. Remove Covered Intervals	Greedy / Sorting	Link
+1024. Video Stitching	DP + Greedy	Link
+452. Minimum Number of Arrows to Burst Balloons	Greedy	Link
+435. Weighted Interval Scheduling Variant (custom)	DP + Greedy	-
+
+🔖 Summary:
+The code is best categorized as a Greedy + Sorting + Interval Scheduling Optimization pattern — a common class of problems in competitive programming and interviews involving efficient conflict resolution among overlapping ranges.
