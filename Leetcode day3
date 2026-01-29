@@ -1,0 +1,10 @@
+  MINIMUM COST TO CONVERT STRING 1
+-----------------------------------------------------------------------------------------------------------------
+Core Algorithm: Floyd-Warshall
+-----------------------------------------------------------------------------------------------------------------------------------
+The problem is essentially finding the Shortest Path in a weighted directed graph where characters are nodes.
+Key PointsGraph Construction: Treat 'a'-'z' as 26 nodes. Map original[i] \to changed[i] as a directed edge with weight cost[i].
+Initial Matrix: Create a $26 \times 26$ matrix initialized to infinity ($\infty$). Set the diagonal (same characters) to 0.
+Handling Multiple Edges: If there are multiple costs for the same transformation, keep only the minimum value.
+All-Pairs Shortest Path: Run Floyd-Warshall to find the minimum cost to convert any character to any other, including indirect paths (e.g., $a \to c \to b$).Linear Pass: Iterate through source and target once.
+For each index $i$:Look up matrix[source[i]][target[i]].Add the value to the total_cost.Early Exit: If any required transformation is $\infty$, immediately return -1.
