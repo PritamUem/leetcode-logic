@@ -6,12 +6,12 @@ A list of conflictingPairs, where each pair [a, b] indicates that both a and b c
 
 🧩 Understanding the Problem:
 You must compute the maximum number of non-conflicting subarrays that can be formed from the array of size n.
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔍 Leetcode Pattern Followed:
 The code falls under the Greedy + Sorting + Interval Scheduling pattern, commonly seen in problems such as:
 
 Interval Partitioning / Interval Scheduling
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Activity Selection Problem
 
 Weighted Interval Scheduling (Profit-based intervals)
