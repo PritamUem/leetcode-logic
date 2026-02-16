@@ -11,14 +11,15 @@ class Main {
 
         int windowSum = 0;
 
-        // First window
+        // First window                        t calculates the sum of the first k elements
         for(int i=0; i<k; i++){
             windowSum += arr[i];
         }
 
         int maxSum = windowSum;
 
-        // Slide window
+        // Slide window                                          Remove left element
+                                                               👉 Add new right element
         for(int i=k; i<arr.length; i++){
             windowSum = windowSum - arr[i-k] + arr[i];
             maxSum = Math.max(maxSum, windowSum);
