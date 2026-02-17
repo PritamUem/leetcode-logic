@@ -1,0 +1,57 @@
+TWO THINGS TO STORE TOGETHER WE USE HASPMAP
+
+AND   HERE TWO THINGS ARE PRESENT KEY AND VALUE 
+like  fuel    price
+       petrol  40
+        disel   20
+
+here petrol uniqe it does not change with time
+
+
+
+import java.util.HashMap;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // country (key), population (value)
+        HashMap<String, Integer> map = new HashMap<>();
+
+        // Insertion
+        map.put("India", 120);
+        map.put("US", 30);
+        map.put("China", 150);
+
+        // Print the HashMap
+        System.out.println(map);
+    }
+}
+// Search operation
+
+if (map.containsKey("Indonesia")) {                  
+    System.out.println("The key is present in the map.");
+} else {
+    System.out.println("The key is not present in the map.");
+}
+
+// Getting values
+System.out.println(map.get("China"));      // Key exists
+System.out.println(map.get("Indonesia"));  // Key does not exist (returns null)
+
+int[] arr = {12, 15, 18};
+
+// Using normal for loop
+for (int i = 0; i < arr.length; i++) {
+    System.out.print(arr[i] + " ");
+}
+
+System.out.println();
+
+// Using enhanced for loop (for-each)
+for (int value : arr) {                             in for loop we irrite with index and print the value  but
+                                                    here we store arr values in value and then print 
+    System.out.print(value + " ");
+}
+
+System.out.println();
+
