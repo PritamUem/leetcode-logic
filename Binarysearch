@@ -1,0 +1,42 @@
+tep 1: Start With a Real-Life Example (Very Important)
+Ask your student:
+             “If I tell you to find page 350 in a 1000-page book, will you start from page 1?”
+They’ll say No.
+Then say:
+             👉 “You open the book in the middle first!”
+
+That’s Binary Search thinking.
+🎯 Step 2: Explain the Basic Idea
+Binary Search means:
+🔥 Divide the search space into HALF every time.
+
+public class Main {
+    public static int binarySearch(int[] arr, int target) {
+
+        int low = 0;
+        int high = arr.length - 1;
+
+        while (low <= high) {
+
+            int mid = (low + high) / 2;
+
+            if (arr[mid] == target)
+                return mid;
+
+            else if (target > arr[mid])
+                low = mid + 1;
+
+            else
+                high = mid - 1;
+        }
+
+        return -1;
+    }
+
+    public static void main(String[] args) {
+
+        int[] arr = {2, 5, 8, 12, 16, 23, 38, 56, 72};
+
+        System.out.println(binarySearch(arr, 23));
+    }
+}
