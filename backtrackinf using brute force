@@ -1,0 +1,49 @@
+#include <stdio.h>   // Used for printf function
+
+// Function to print the current subset
+void printSubset(int subset[], int size) {
+    printf("{ ");   // Print opening bracket
+    
+    // Loop to print elements of subset
+    for(int i = 0; i < size; i++)
+        printf("%d ", subset[i]);   // Print each element
+    
+    printf("}\n");   // Print closing bracket and new line
+}
+
+
+// Backtracking function to generate all subsets
+void generateSubsets(int arr[], int n, int index, int subset[], int subsetSize) {
+    
+    // Print the current subset (base action)
+    printSubset(subset, subsetSize);
+
+    // Loop through remaining elements starting from 'index'
+    for(int i = index; i < n; i++) {
+        
+        // Step 1: Choose the element
+        subset[subsetSize] = arr[i];   // Add current element to subset
+        
+        // Step 2: Explore further with next index
+        // i + 1 ensures we don't reuse previous elements
+        generateSubsets(arr, n, i + 1, subset, subsetSize + 1);
+
+        // Step 3: Backtrack
+        // No need to manually remove element
+        // Because subsetSize controls how many elements are valid
+    }
+}
+
+
+int main() {
+    
+    int arr[] = {1, 2, 3};   // Original set
+    int n = sizeof(arr) / sizeof(arr[0]);   // Calculate size of array
+
+    int subset[n];   // Temporary array to store current subset
+
+    // Start generating subsets
+    generateSubsets(arr, n, 0, subset, 0);
+
+    return 0;   // End program
+}
