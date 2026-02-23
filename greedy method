@@ -1,0 +1,25 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int coin[]={50,20,10,5,2,1};
+    
+    int n=6;
+    int amount=94;
+    
+    for(int i=0;i<n;i++){
+        
+        if(amount>=coin[i]){
+            
+            int count=amount/coin[i];
+            
+            amount=amount%coin[i];
+            
+            printf("%d  coin and %d\n",count,coin[i]);
+        }
+        
+    }
+    }
+
+
